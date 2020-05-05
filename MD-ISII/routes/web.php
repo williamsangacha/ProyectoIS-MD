@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/visitante', function () {
-    return view('crearVisitante');
+    return view('Visitante');
 });
