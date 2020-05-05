@@ -60,7 +60,14 @@
                 </ul>
             </div>
             </nav>
-        <div align = "center" class="logo">
+        <h2  style="padding: 0px 0px 0px 40px">@yield('Objeto')</h2>
+
+        <div style="padding: 0px 0px 20px 40px">
+            @yield('botones')
+        </div>
+
+        <div align = "center" style="padding: 0px 25px 0px 25px">
+
             @yield('contenido')
             <img width="100" height="100" align= "center" src=" {{asset('Imagenes/fondoBody.png') }}">
         </div>
