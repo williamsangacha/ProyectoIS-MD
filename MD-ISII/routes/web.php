@@ -17,10 +17,17 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/visitante', function () {
+/*Route::get('/visitante', function () {
     return view('Visitante');
 });
 
 Route::get('/areas', function () {
     return view('AreaRecreativa');
 });
+Route::get('/encargado', function () {
+    return view('Encargado');
+});
+});*/
+
+Route::resource('visitante', 'VisitanteController');
+Route::resource('areas', 'AreasController');
