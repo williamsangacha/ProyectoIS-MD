@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/visitante', function () {
     return view('Visitante');
 });
+
+Route::get('/areas', function () {
+    return view('AreaRecreativa');
+});
