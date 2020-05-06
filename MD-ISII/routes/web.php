@@ -17,10 +17,13 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/visitante', function () {
+/*Route::get('/visitante', function () {
     return view('Visitante');
 });
 
 Route::get('/encargado', function () {
     return view('Encargado');
 });
+});*/
+
+Route::resource('visitante', 'VisitanteController');
