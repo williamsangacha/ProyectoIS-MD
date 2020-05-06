@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/visitante', function () {
+/*Route::get('/visitante', function () {
     return view('Visitante');
-});
+});*/
+
+Route::resource('visitante', 'VisitanteController');
