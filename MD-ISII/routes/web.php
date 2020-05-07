@@ -21,10 +21,17 @@ Route::get('/', function () {
     return view('Visitante');
 });
 
+Route::get('/areas', function () {
+    return view('AreaRecreativa');
+});
 Route::get('/encargado', function () {
     return view('Encargado');
 });*/
 
 
 Route::resource('visitante', 'VisitanteController');
+<<<<<<< HEAD
 Route::resource('encargado', 'EncargadoController');
+=======
+Route::resource('areas', 'AreasController');
+>>>>>>> fbd98f5d795074b86080ccd71302db9e3f45540e
