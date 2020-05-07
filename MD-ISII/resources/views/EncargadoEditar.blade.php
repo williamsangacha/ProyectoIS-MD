@@ -38,28 +38,30 @@
       <div class="form-group col-md-1">
         <label>Edad</label>
         <input type="text" class="form-control" name="encedad" value="{{$encargado->encedad}}">
-      </div>     
-        @if($visitante->vissexo == 'M')
-        <div class="form-group col-md-2">
-          <label>Sexo</label>
-          <select name="encsexo" class="form-control">
-            <option value ='M' selected>Masculino</option>
-            <option value = 'F'>Femenino</option>
-          </select>
+      </div> 
+  
+      @if($encargado->encsexo == 'M')
+      <div class="form-group col-md-2">
+        <label>Sexo</label>
+        <select name="encsexo" class="form-control">
+          <option value ='M' selected>Masculino</option>
+          <option value = 'F'>Femenino</option>
+        </select>
       </div>
-        @else
-        <div class="form-group col-md-2">
-          <label>Sexo</label>
-          <select name="encsexo" class="form-control">
-            <option value = 'M'>Masculino</option>
-            <option value = 'F'selected>Femenino</option>
-          </select>
-        </div>
-        <div class="form-group col-md-3">
+      @else
+      <div class="form-group col-md-3">
+        <label>Sexo</label>
+        <select name="encsexo" class="form-control">
+          <option value = 'M'>Masculino</option>
+          <option value = 'F'selected>Femenino</option>
+        </select>
+      </div>
+      @endif
+
+      <div class="form-group col-md-3">
         <label>Sueldo</label>
         <input type="text" class="form-control" name="encsueldo" Value="{{$encargado->encsueldo}}">
       </div>
-        @endif
       <div class="col-md-6">
         <button type="submit" class="btn btn-primary">Editar</button>
         <a class="btn btn-danger btn-xs" href="/encargado">Cancelar</a>

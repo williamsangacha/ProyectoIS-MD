@@ -45,11 +45,11 @@
           <option value = 'F'>Femenino</option>
         </select>
       </div>
-      <div style = "padding-left: 15px">
       <div class="form-group col-md-3">
         <label>Sueldo</label>
         <input type="text" class="form-control" name="encsueldo" placeholder="Sueldo">
       </div>
+      <div style = "padding-left: 15px">
         <button type="submit" class="btn btn-primary">Guardar</button>
       </div>
 
