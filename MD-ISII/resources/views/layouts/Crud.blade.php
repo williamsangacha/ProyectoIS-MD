@@ -39,7 +39,7 @@
                     <a class="dropdown-item" href="/areas">Area Recreativa</a>
                     <a class="dropdown-item" href="/encargado">Encargado</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Reserva</a>
+                    <a class="dropdown-item" href="/reserva">Reserva</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -51,7 +51,7 @@
                     <a class="dropdown-item" href="/areas">Area Recreativa</a>
                     <a class="dropdown-item" href="/encargado">Encargado</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Reserva</a>
+                    <a class="dropdown-item" href="/reserva">Reserva</a>
                     </div>
                 </li>
                 <li class="nav-item">
