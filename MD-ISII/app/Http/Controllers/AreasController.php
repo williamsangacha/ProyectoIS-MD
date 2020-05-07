@@ -18,7 +18,7 @@ class AreasController extends Controller
     public function index()
     {
         $areas=AreasModel::all();
-        return view('Areas',compact('areas'));
+        return view('AreaRecreativa',compact('areas'));
     }
 
     /**
@@ -39,7 +39,7 @@ class AreasController extends Controller
      */
     public function store(Request $request)
     {
-        $areas = new VisitanteModel;
+        $areas = new AreasModel;
 
         $areas->areacodigo=$request->areacodigo;
         $areas->encid=$request->encid;

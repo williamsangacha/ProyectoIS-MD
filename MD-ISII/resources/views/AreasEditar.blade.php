@@ -35,11 +35,11 @@
         <label>Area</label>
         <input type="text" class="form-control" name="areanombre" value="{{$areas->areanombre}}">
       </div>
-      <div class="form-group col-md-1">
+      <div class="form-group col-md-3">
         <label>Descripcion</label>
         <input type="text" class="form-control" name="areadesc" value="{{$areas->areadesc}}">
       </div>     
-      <div class="form-group col-md-2">
+      <div class="form-group col-md-3">
       <label>Aforo</label>
         <input type="number" class="form-control" name="areaaforo" value="{{$areas->areaaforo}}">
       </div>     
