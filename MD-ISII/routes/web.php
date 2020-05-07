@@ -32,3 +32,4 @@ Route::get('/encargado', function () {
 Route::resource('visitante', 'VisitanteController');
 Route::resource('encargado', 'EncargadoController');
 Route::resource('areas', 'AreasController');
+Route::resource('reserva', 'ReservaController');
