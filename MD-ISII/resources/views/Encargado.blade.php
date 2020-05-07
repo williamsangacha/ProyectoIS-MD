@@ -28,6 +28,7 @@
     <th>Apellido</th>
     <th>Edad</th>
     <th>Sexo</th>
+    <th>Sueldo</th>
     <th colspan="2" class="text-center">Opciones</th>
     
   </thead>
@@ -39,6 +40,7 @@
       <td>{{$encargado->encapellido}}</td>
       <td>{{$encargado->encedad}}</td>
       <td>{{$encargado->encsexo}}</td>
+      <td>{{$encargado->encsueldo}}</td>
       <td class="text-right"><a class="btn btn-primary btn-xs" href="{{route('encargado.edit',$encargado->encid)}}">Editar</a></td>
       <td>
         <form method="POST" action="{{route('encargado.destroy',$encargado->encid)}}">
