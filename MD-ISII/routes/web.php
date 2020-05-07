@@ -23,7 +23,8 @@ Route::get('/', function () {
 
 Route::get('/encargado', function () {
     return view('Encargado');
-});
 });*/
 
+
 Route::resource('visitante', 'VisitanteController');
+Route::resource('encargado', 'EncargadoController');
