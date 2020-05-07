@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\AreasModel;
+use App\EncargadoModel;
 use Dotenv\Result\Success;
 use Illuminate\Cache\Events\KeyForgotten;
 
@@ -28,7 +29,8 @@ class AreasController extends Controller
      */
     public function create()
     {
-        return view('AreasCrear');
+        $encargados = EncargadoModel::all();
+        return view('AreasCrear',compact('encargados'));
     }
 
     /**

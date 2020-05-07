@@ -28,7 +28,12 @@
       </div>
       <div class="form-group col-md-3">
         <label>Encargado</label>
-        <input type="text" class="form-control" name="encid" placeholder="ID Encargado">
+        <select name="encid" class="form-control" type="text" id="encid" style="width:220px">
+        <option>Encargados *</option>
+        @foreach($encargados as $encargado)
+        <option value="{{$encargado->encid}}">{{$encargado->encnombre}}</option>
+        @endforeach
+        </select>
       </div>
       <div class="form-group col-md-3">
         <label>Area</label>
@@ -40,7 +45,7 @@
       </div>
       <div class="form-group col-md-3">
         <label>Aforo</label>
-        <input type="number" class="form-control" name="areaaforo" placeholder="Aforo del Area">
+        <input type="number" class="form-control" name="areaaforo" placeholder="Aforo del Area" max=20 min=0>
       </div>
       <div style = "padding-left: 15px">
         <button type="submit" class="btn btn-primary">Guardar</button>
