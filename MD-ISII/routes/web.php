@@ -30,8 +30,5 @@ Route::get('/encargado', function () {
 
 
 Route::resource('visitante', 'VisitanteController');
-<<<<<<< HEAD
 Route::resource('encargado', 'EncargadoController');
-=======
 Route::resource('areas', 'AreasController');
->>>>>>> fbd98f5d795074b86080ccd71302db9e3f45540e
