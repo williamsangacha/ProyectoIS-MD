@@ -44,7 +44,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownReporte" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
                     Reporte
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="select">
                     <a class="dropdown-item" href="/visitante">Visitante</a>
                     <a class="dropdown-item" href="/areas">Area Recreativa</a>
                     <a class="dropdown-item" href="/encargado">Encargado</a>
