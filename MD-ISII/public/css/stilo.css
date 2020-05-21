@@ -1,0 +1,19 @@
+body {
+    background-color: #0f94b7;
+    background-image: linear-gradient(0deg, #0f94b7 0%, #a4dada 51%, #0f94b7 100%);
+  }
+#nav
+{
+    background-color: transparent !important;
+}
+.display-1
+{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 700%;
+}
+#select
+{
+    background-color: #0f94b7;
+    background-image: linear-gradient(0deg, #0f94b7 0%, #a4dada 51%, #0f94b7 100%);
+}
+
