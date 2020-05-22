@@ -54,6 +54,7 @@ class ReservaController extends Controller
 
         $reservas->rescodigo=$request->rescodigo;
         $reservas->visid=$request->visid;
+        $reservas->areacodigo=$request->areacodigo;
         $reservas->resfecha=$request->resfecha;
         $reservas->reshora=$request->reshora;;
         
