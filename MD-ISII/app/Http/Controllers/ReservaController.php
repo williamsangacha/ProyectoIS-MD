@@ -22,6 +22,12 @@ class ReservaController extends Controller
         $visitantes = VisitanteModel::all();
         $areas = AreasModel::all();
         return view('Reserva',compact('reservas','visitantes','areas'));
+        /*$reservas1 = ReservaModel::
+            join('reserva', 'visid', '=' ,'visitante', 'visid')
+            ->select('reserva.*', 'visitante.visid')
+            ->get();
+        dd(reservas1);*/
+        return view('Reserva',compact('reservas','visitantes'));
     }
 
     /**
