@@ -36,15 +36,14 @@
     @foreach($reservas as $reserva)  
     <tr>             
       <td>{{$reserva->rescodigo}}</td>
-      <td>{{$reserva->visid}}</td>
-      @foreach($areas as $area)
-        @if($area->areacodigo==$reserva->areacodigo)
-          <td>{{$area->areanombre}}</td>
-        @endif
-      @endforeach
       @foreach($visitantes as $visitante)
         @if($visitante->visid==$reserva->visid)
           <td>{{$visitante->visnombre}} {{$visitante->visapellido}}</td>
+        @endif
+      @endforeach
+      @foreach($areas as $area)
+        @if($area->areacodigo==$reserva->areacodigo)
+          <td>{{$area->areanombre}}</td>
         @endif
       @endforeach
       <td>{{$reserva->resfecha}}</td>
