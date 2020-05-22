@@ -37,6 +37,15 @@
           </select>
       </div>
       <div class="form-group col-md-3">
+        <label>Area</label>
+        <select name="areacodigo" class="form-control" type="text" id="areacodigo" style="width:220px">
+          @foreach($areas as $area)
+          <option @if($reservas->areacodigo == $area->areacodigo) selected  @endif 
+          value="{{$area->areacodigo}}">{{$area->areanombre}}</option>
+          @endforeach
+          </select>
+      </div>
+      <div class="form-group col-md-3">
         <label>Fecha de Reserva</label>
         <input type="date" class="form-control" name="resfecha" value="{{$reservas->resfecha}}">
       </div>

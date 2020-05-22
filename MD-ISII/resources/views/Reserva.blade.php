@@ -25,8 +25,10 @@
   <thead>
     <th>Codigo Reserva</th>
     <th>Visitante</th>
+    <th>Area</th>
     <th>Fecha Reserva</th>
     <th>Hora Reserva</th>
+    
     <th colspan="2" class="text-center">Opciones</th>
     
   </thead>
@@ -35,6 +37,7 @@
     <tr>             
       <td>{{$reserva->rescodigo}}</td>
       <td>{{$reserva->visid}}</td>
+      <td>{{$reserva->areacodigo}}</td>
       <td>{{$reserva->resfecha}}</td>
       <td>{{$reserva->reshora}}</td>
       <td class="text-right"><a class="btn btn-primary btn-xs" href="{{route('reserva.edit',$reserva->rescodigo)}}">Editar</a></td>

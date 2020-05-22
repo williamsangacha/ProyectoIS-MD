@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ReservaModel;
 use App\VisitanteModel;
+use App\AreasModel;
 use Dotenv\Result\Success;
 use Illuminate\Cache\Events\KeyForgotten;
 
@@ -19,7 +20,8 @@ class ReservaController extends Controller
     {
         $reservas=ReservaModel::all();
         $visitantes = VisitanteModel::all();
-        return view('Reserva',compact('reservas','visitantes'));
+        $areas = AreasModel::all();
+        return view('Reserva',compact('reservas','visitantes','areas'));
     }
 
     /**
@@ -30,7 +32,8 @@ class ReservaController extends Controller
     public function create()
     {
         $visitantes = VisitanteModel::all();
-        return view('ReservaCrear',compact('visitantes'));
+        $areas = AreasModel::all();
+        return view('ReservaCrear',compact('visitantes','areas'));
     }
 
     /**
@@ -75,7 +78,8 @@ class ReservaController extends Controller
     {
         $reservas= ReservaModel::findOrFail($id);
         $visitantes = VisitanteModel::all();
-        return view('ReservaEditar',compact('reservas','visitantes')); 
+        $areas = AreasModel::all();
+        return view('ReservaEditar',compact('reservas','visitantes','areas')); 
     }
 
     /**
