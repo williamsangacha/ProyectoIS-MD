@@ -34,7 +34,11 @@
     @foreach($reservas as $reserva)  
     <tr>             
       <td>{{$reserva->rescodigo}}</td>
-      <td>{{$reserva->visid}}</td>
+      @foreach($visitantes as $visitante)
+        @if($visitante->visid==$reserva->visid)
+          <td>{{$visitante->visnombre}} {{$visitante->visapellido}}</td>
+        @endif
+      @endforeach
       <td>{{$reserva->resfecha}}</td>
       <td>{{$reserva->reshora}}</td>
       <td class="text-right"><a class="btn btn-primary btn-xs" href="{{route('reserva.edit',$reserva->rescodigo)}}">Editar</a></td>
