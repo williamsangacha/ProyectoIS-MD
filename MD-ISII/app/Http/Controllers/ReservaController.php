@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ReservaModel;
+use App\VisitanteModel;
 use Dotenv\Result\Success;
+use Illuminate\Cache\Events\KeyForgotten;
 
 class ReservaController extends Controller
 {
@@ -16,7 +18,8 @@ class ReservaController extends Controller
     public function index()
     {
         $reservas=ReservaModel::all();
-        return view('Reserva',compact('reservas'));
+        $visitantes = VisitanteModel::all();
+        return view('Reserva',compact('reservas','visitantes'));
     }
 
     /**
@@ -26,7 +29,8 @@ class ReservaController extends Controller
      */
     public function create()
     {
-        //
+        $visitantes = VisitanteModel::all();
+        return view('ReservaCrear',compact('visitantes'));
     }
 
     /**
@@ -37,7 +41,17 @@ class ReservaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $reservas = new ReservaModel;
+
+        $reservas->rescodigo=$request->rescodigo;
+        $reservas->visid=$request->visid;
+        $reservas->resfecha=$request->resfecha;
+        $reservas->reshora=$request->reshora;;
+        
+
+        $reservas->save();
+
+        return redirect()->route('reserva.index')->with ('mensaje','Se agrego correctamente');
     }
 
     /**
@@ -59,7 +73,9 @@ class ReservaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $reservas= ReservaModel::findOrFail($id);
+        $visitantes = VisitanteModel::all();
+        return view('ReservaEditar',compact('reservas','visitantes')); 
     }
 
     /**
@@ -71,7 +87,8 @@ class ReservaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $reservas = ReservaModel::find($id)->update($request->all());
+        return redirect()->route('reserva.index')->with ('mensaje','Se edito correctamente');
     }
 
     /**
@@ -82,6 +99,8 @@ class ReservaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $reservas= ReservaModel::findOrFail($id);
+        $reservas->delete();
+        return redirect()->route('reserva.index')->with ('mensaje','se elimino correctamente');
     }
 }

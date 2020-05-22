@@ -29,7 +29,13 @@
       </div>
       <div class="form-group col-md-3">
         <label>Encargado</label>
-        <input type="text" class="form-control" name="encid" Value="{{$areas->encid}}">
+        <select name="encid" class="form-control" type="text" id="encid" style="width:220px">
+          @foreach($encargados as $encargado)
+          <option @if($areas->encid == $encargado->encid) selected  @endif 
+          value="{{$encargado->encid}}">{{$encargado->encnombre}} {{$encargado->encapellido}}</option>
+          @endforeach
+          </select>
+        
       </div>
       <div class="form-group col-md-3">
         <label>Area</label>

@@ -31,7 +31,7 @@
         <select name="encid" class="form-control" type="text" id="encid" style="width:220px">
         <option>Encargados *</option>
         @foreach($encargados as $encargado)
-        <option value="{{$encargado->encid}}">{{$encargado->encnombre}}</option>
+        <option value="{{$encargado->encid}}">{{$encargado->encnombre}} {{$encargado->encapellido}}</option>
         @endforeach
         </select>
       </div>

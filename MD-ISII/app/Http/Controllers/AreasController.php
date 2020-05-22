@@ -74,7 +74,8 @@ class AreasController extends Controller
     public function edit($id)
     {
         $areas= AreasModel::findOrFail($id);
-        return view('AreasEditar',compact('areas')); 
+        $encargados = EncargadoModel::all();
+        return view('AreasEditar',compact('areas','encargados')); 
     }
 
     /**
