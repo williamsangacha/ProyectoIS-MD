@@ -1,22 +1,21 @@
 <html>
     <head>
-
-        <title>Team - @yield('title')</title>
-        <link rel="shortcut icon" type="image/x-icon"href="{{asset('Imagenes/icono.ico')}}">
+        <title>Team - @yield('title')</title>        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{ asset('css/stilo.css') }}" />
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+        <link rel="shortcut icon" type="image/x-icon"href="{{asset('Imagenes/icono.ico')}}">
     </head>
     <body>
-        <div class = "Titulo">
+        <h1 class="display-5">
             @yield('titulo')
-        </div>
+        </h1>
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
         <a class="navbar-brand" href="/">
             <img src=" {{asset('Imagenes/fondoBody.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">

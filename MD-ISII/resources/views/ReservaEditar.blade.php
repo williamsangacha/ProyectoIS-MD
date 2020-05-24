@@ -1,17 +1,10 @@
 @extends('layouts.crud')
 
-@section('title', 'Team')
+@section('title', 'Editar Reserva')
 
-@section('Titulo')
-  <h1 class="display-5">Ministerio de Deportes</h1>
-@show
-
-@section('navbar navbar-expand-lg navbar-light bg-light')
-  <!--Contenido extra para la navegación-->
-@show
+@section('titulo', 'Ministerio de Deportes')
  
 @section('Objeto', 'Editar Reserva')
-
 
 @section('botones')
     <br>

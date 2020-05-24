@@ -1,6 +1,6 @@
 @extends('layouts.crud')
 
-@section('title', 'Team')
+@section('title', 'Encargado')
 
 @section('Titulo')
   <h1 class="display-5">Ministerio de Deportes</h1>
