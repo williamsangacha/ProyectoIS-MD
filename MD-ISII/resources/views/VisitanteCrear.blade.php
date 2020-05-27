@@ -36,7 +36,7 @@
       </div>
       <div class="form-group col-md-1">
         <label>Edad</label>
-        <input type="text" class="form-control" name="visedad" placeholder="Edad">
+        <input type="number" class="form-control" name="visedad" placeholder="Edad" min="18" max="90">
       </div>
       <div class="form-group col-md-2">
         <label>Sexo</label>

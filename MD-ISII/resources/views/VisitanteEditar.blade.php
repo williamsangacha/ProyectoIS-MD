@@ -37,7 +37,7 @@
       </div>
       <div class="form-group col-md-1">
         <label>Edad</label>
-        <input type="text" class="form-control" name="visedad" value="{{$visitante->visedad}}">
+        <input type="text" class="form-control" name="visedad" value="{{$visitante->visedad}}" min="18" max="90">
       </div>     
         @if($visitante->vissexo == 'M')
         <div class="form-group col-md-2">

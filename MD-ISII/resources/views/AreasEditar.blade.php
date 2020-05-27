@@ -47,7 +47,7 @@
       </div>     
       <div class="form-group col-md-3">
       <label>Aforo</label>
-        <input type="number" class="form-control" name="areaaforo" value="{{$areas->areaaforo}}">
+        <input type="number" class="form-control" name="areaaforo" value="{{$areas->areaaforo}}" max=20 min=0>
       </div>     
       <div class="col-md-6">
         <button type="submit" class="btn btn-primary">Editar</button>
