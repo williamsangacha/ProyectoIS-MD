@@ -2,14 +2,8 @@
 
 @section('title', 'Team')
 
-@section('Titulo')
-  <h1 class="display-5">Ministerio de Deportes</h1>
-@show
+@section('titulo','Ministerio de Deportes')
 
-@section('navbar navbar-expand-lg navbar-light bg-light')
-  <!--Contenido extra para la navegación-->
-@show
- 
 @section('Objeto', 'Areas')
 
 
