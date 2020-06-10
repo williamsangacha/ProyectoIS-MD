@@ -40,11 +40,11 @@
       </div>
       <div class="form-group col-md-3">
         <label>Fecha de Reserva</label>
-        <input type="date" class="form-control" name="resfecha" value="<?php echo date("Y-m-d");?>">
+        <input type="date" class="form-control" name="resfecha" value="<?php echo date("Y-m-d");?>" min="<?php echo date("Y-m-d");?>">
       </div>
       <div class="form-group col-md-2">
         <label>Hora de Reserva</label>
-        <input type="time" class="form-control" name="reshora" step="1" value="00:00:00">
+        <input type="time" class="form-control" name="reshora" step="1" value="<?php date_default_timezone_set("America/Bogota"); echo date("H:i:s");?>" min="<?php date_default_timezone_set("America/Bogota"); echo date("H:i:s");?>">
       </div>
       <div style = "padding-left: 15px">
         <button type="submit" class="btn btn-primary">Guardar</button>

@@ -43,7 +43,15 @@ class AreasController extends Controller
     {
         $areas = new AreasModel;
 
-        $areas->areacodigo=$request->areacodigo;
+        if (AreasModel::where('areacodigo', '=', $request->areacodigo)->first())
+        {
+            return redirect()->back()->withInput()->withErrors(['areacodigo' => 'El ID que ingreso ya existe']);
+
+        //return 'exists';
+        } else {
+            $areas->areacodigo=$request->areacodigo;
+        }
+
         $areas->encid=$request->encid;
         $areas->areanombre=$request->areanombre;
         $areas->areadesc=$request->areadesc;;

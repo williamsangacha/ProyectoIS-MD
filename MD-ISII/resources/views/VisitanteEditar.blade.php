@@ -22,15 +22,15 @@
       </div>
       <div class="form-group col-md-3">
         <label>Nombre</label>
-        <input type="text" class="form-control" name="visnombre" Value="{{$visitante->visnombre}}">
+        <input type="text" class="form-control" name="visnombre" Value="{{$visitante->visnombre}}" required>
       </div>
       <div class="form-group col-md-3">
         <label>Apellido</label>
-        <input type="text" class="form-control" name="visapellido" value="{{$visitante->visapellido}}">
+        <input type="text" class="form-control" name="visapellido" value="{{$visitante->visapellido}}" required>
       </div>
       <div class="form-group col-md-1">
         <label>Edad</label>
-        <input type="text" class="form-control" name="visedad" value="{{$visitante->visedad}}" min="18" max="90">
+        <input type="text" class="form-control" name="visedad" value="{{$visitante->visedad}}" min="18" max="90" required>
       </div>     
         @if($visitante->vissexo == 'M')
         <div class="form-group col-md-2">

@@ -41,7 +41,15 @@ class VisitanteController extends Controller
     {
         $visitante = new VisitanteModel;
 
-        $visitante->visid=$request->visid;
+        if (VisitanteModel::where('visid', '=', $request->visid)->first())
+        {
+            return redirect()->back()->withInput()->withErrors(['visid' => 'El ID que ingreso ya existe']);
+
+        //return 'exists';
+        } else {
+            $visitante->visid=$request->visid;
+        }
+
         $visitante->visnombre=$request->visnombre;
         $visitante->visapellido=$request->visapellido;
         $visitante->visedad=$request->visedad;;

@@ -32,15 +32,15 @@
       </div>
       <div class="form-group col-md-3">
         <label>Area</label>
-        <input type="text" class="form-control" name="areanombre" value="{{$areas->areanombre}}">
+        <input type="text" class="form-control" name="areanombre" value="{{$areas->areanombre}}" required>
       </div>
       <div class="form-group col-md-3">
         <label>Descripcion</label>
-        <input type="text" class="form-control" name="areadesc" value="{{$areas->areadesc}}">
+        <input type="text" class="form-control" name="areadesc" value="{{$areas->areadesc}}"required>
       </div>     
       <div class="form-group col-md-3">
       <label>Aforo</label>
-        <input type="number" class="form-control" name="areaaforo" value="{{$areas->areaaforo}}" max=20 min=0>
+        <input type="number" class="form-control" name="areaaforo" value="{{$areas->areaaforo}}" min=0>
       </div>     
       <div class="col-md-6">
         <button type="submit" class="btn btn-primary">Editar</button>

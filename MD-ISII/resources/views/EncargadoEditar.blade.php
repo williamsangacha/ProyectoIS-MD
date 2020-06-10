@@ -23,15 +23,15 @@
       </div>
       <div class="form-group col-md-3">
         <label>Nombre</label>
-        <input type="text" class="form-control" name="encnombre" Value="{{$encargado->encnombre}}">
+        <input type="text" class="form-control" name="encnombre" Value="{{$encargado->encnombre}}" required>
       </div>
       <div class="form-group col-md-3">
         <label>Apellido</label>
-        <input type="text" class="form-control" name="encapellido" value="{{$encargado->encapellido}}">
+        <input type="text" class="form-control" name="encapellido" value="{{$encargado->encapellido}}" required>
       </div>
       <div class="form-group col-md-1">
         <label>Edad</label>
-        <input type="text" class="form-control" name="encedad" value="{{$encargado->encedad}}" max=90 min=18>
+        <input type="number" class="form-control" name="encedad" value="{{$encargado->encedad}}" min=18 max=90 required>
       </div> 
   
       @if($encargado->encsexo == 'M')
@@ -54,7 +54,7 @@
 
       <div class="form-group col-md-3">
         <label>Sueldo</label>
-        <input type="text" class="form-control" name="encsueldo" Value="{{$encargado->encsueldo}}">
+        <input type="number" class="form-control" name="encsueldo" Value="{{$encargado->encsueldo}}" min=0 required>
       </div>
       <div class="col-md-6">
         <button type="submit" class="btn btn-primary">Editar</button>

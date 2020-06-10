@@ -41,7 +41,15 @@ class EncargadoController extends Controller
     {
         $encargado = new EncargadoModel;
 
-        $encargado->encid=$request->encid;
+        
+        if (EncargadoModel::where('encid', '=', $request->encid)->first())
+        {
+            return redirect()->back()->withInput()->withErrors(['encid' => 'El ID que ingreso ya existe']);
+
+        //return 'exists';
+        } else {
+            $encargado->encid=$request->encid;
+        }
         $encargado->encnombre=$request->encnombre;
         $encargado->encapellido=$request->encapellido;
         $encargado->encedad=$request->encedad;;
