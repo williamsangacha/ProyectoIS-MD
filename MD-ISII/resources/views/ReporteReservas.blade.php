@@ -48,7 +48,7 @@
                 
                 <div class="form-group col-md-3">
                     <label>Fecha</label>
-                    <input type="text" class="form-control" id="fecha" name="fecha" size="30">
+                    <input type="text" class="form-control" id="fecha" name="fecha" maxlength="10">
                   </div>
                 
                 

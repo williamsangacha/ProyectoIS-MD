@@ -51,6 +51,7 @@
                   <tr>
                 <th>Codigo Reserva</th>
                 <th>Visitante</th>
+                
                 <th>Hora Reserva</th>
             </tr>
                 
@@ -66,6 +67,7 @@
                       <td>{{$visitante->visnombre}} {{$visitante->visapellido}}</td>
                     @endif
                   @endforeach
+                  
                   <td>{{$reserva->reshora}}</td>
                   
                 </tr>
