@@ -95,9 +95,16 @@ class ReporteReservasController extends Controller
         //$reservas=ReservaModel::all();
         $visitantes = VisitanteModel::all();
         $areas = AreasModel::all();
-        $reservas=ReservaModel::where('areacodigo','=', $request->areacodigo)->where('resfecha','=', $request->fecha)->orderBy('reshora','ASC')->paginate(18);
         $ar = $request->areacodigo;
         $fh = $request->fecha;
+        if($request->areacodigo == "Todas"){
+            $reservas=ReservaModel::where('resfecha','=', $request->fecha)->orderBy('reshora','ASC')->paginate(18);
+        }
+        else{
+            $reservas=ReservaModel::where('areacodigo','=', $request->areacodigo)->where('resfecha','=', $request->fecha)->orderBy('reshora','ASC')->paginate(18);
+        }
+        
+        
         //dd($ar);
 
         

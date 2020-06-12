@@ -14,8 +14,8 @@
         <div >
           <div >
             <label>Area</label>
-            <select name="areacodigo" class="form-control" type="text" id="areacodigo" style="width:220px">
-                <option>Areas</option>
+            <select name="areacodigo" class="form-control" type="text" id="areacodigo" style="width:220px" required>
+                <option>Todas</option>
                 @foreach($areas as $area)
                 <option value="{{$area->areacodigo}}">{{$area->areanombre}}</option>
                 @endforeach
@@ -40,7 +40,8 @@
                 'Julio', 'Agosto', 'Septiembre',
                 'Octubre', 'Noviembre', 'Diciembre'],
                 dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
-                defaultDate: "-1"
+                defaultDate: "0",
+                minDate: "-1Y-5M-11D", maxDate: "+1Y+6M+19D"
                 });
                 });
                 </script>
@@ -48,7 +49,7 @@
                 
                 <div class="form-group col-md-3">
                     <label>Fecha</label>
-                    <input type="text" class="form-control" id="fecha" name="fecha" maxlength="10">
+                    <input type="text" class="form-control" id="fecha" name="fecha" readonly>
                   </div>
                 
                 
