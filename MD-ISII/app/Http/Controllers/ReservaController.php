@@ -8,6 +8,7 @@ use App\VisitanteModel;
 use App\AreasModel;
 use Dotenv\Result\Success;
 use Illuminate\Cache\Events\KeyForgotten;
+use App;
 
 class ReservaController extends Controller
 {
@@ -50,6 +51,7 @@ class ReservaController extends Controller
      */
     public function store(Request $request)
     {
+        
         $reservas = new ReservaModel;
 
         $reservas->rescodigo=$request->rescodigo;
@@ -60,6 +62,7 @@ class ReservaController extends Controller
         
 
         $reservas->save();
+        
 
         return redirect()->route('reserva.index')->with ('mensaje','Se agrego correctamente');
     }

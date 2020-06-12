@@ -33,3 +33,6 @@ Route::resource('visitante', 'VisitanteController');
 Route::resource('encargado', 'EncargadoController');
 Route::resource('areas', 'AreasController');
 Route::resource('reserva', 'ReservaController');
+Route::resource('reporteReservas', 'ReporteReservasController');
+Route::get('Reporte/PDF', 'ReporteReservasController@ReportePDF')
+         ->name('Reporte.ReportePDF');//con este llamas en la vista

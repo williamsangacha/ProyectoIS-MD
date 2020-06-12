@@ -39,23 +39,17 @@
                     <a class="dropdown-item" href="/reserva">Reserva</a>
                     </div>
                 </li>
-                <!--
+                
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownReporte" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
                     Reporte
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="select">
-                    <a class="dropdown-item" href="/visitante">Visitante</a>
-                    <a class="dropdown-item" href="/areas">Area Recreativa</a>
-                    <a class="dropdown-item" href="/encargado">Encargado</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/reserva">Reserva</a>
+                    <a class="dropdown-item" href="/reporteReservas">Reservas</a>
                     </div>
                 </li>
-                -->
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Reportes</a>
-                </li>
+                
+                
                 </ul>
             </div>
             </nav>
